@@ -2,6 +2,7 @@ package com.udacity.jdnd.course3.critter.user;
 
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import java.time.DayOfWeek;
 import java.util.Set;
 
 @Entity
@@ -11,7 +12,7 @@ public class Employee extends User {
     private Set<EmployeeSkill> skills;
 
     @ElementCollection
-    private Set<Day> daysAvailable;
+    private Set<DayOfWeek> daysAvailable;
 
     public Set<EmployeeSkill> getSkills() {
         return skills;
@@ -21,11 +22,11 @@ public class Employee extends User {
         this.skills = skills;
     }
 
-    public Set<Day> getDaysAvailable() {
+    public Set<DayOfWeek> getDaysAvailable() {
         return daysAvailable;
     }
 
-    public void setDaysAvailable(Set<Day> daysAvailable) {
+    public void setDaysAvailable(Set<DayOfWeek> daysAvailable) {
         this.daysAvailable = daysAvailable;
     }
 }
