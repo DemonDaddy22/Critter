@@ -40,4 +40,6 @@ public class Customer extends User {
     public void setPets(List<Pet> pets) {
         this.pets = pets;
     }
+
+    public void addPet(Pet pet){ this.pets.add(pet); }
 }
